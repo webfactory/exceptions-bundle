@@ -10,4 +10,9 @@ class WebfactoryExceptionsBundle extends Bundle {
         return 'TwigBundle';
     }
 
+    public function build(ContainerBuilder $container) {
+        parent::build($container);
+        $container->addCompilerPass(new DependencyInjection\Compiler\OverrideControllerPass());
+    }
+
 }
