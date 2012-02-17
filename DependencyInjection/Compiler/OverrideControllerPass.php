@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 class OverrideControllerPass implements CompilerPassInterface {
 
     public function process(ContainerBuilder $container) {
-        $container->setParameter('twig.exception_listener.controller', 'Webfactory\Bundle\ExceptionBundle\Controller\ExceptionController::showAction');
+        $container->setParameter('twig.exception_listener.controller', 'Webfactory\Bundle\ExceptionsBundle\Controller\ExceptionController::showAction');
     }
 
 }
