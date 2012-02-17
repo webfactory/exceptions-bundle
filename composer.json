@@ -1,0 +1,7 @@
+{
+    "name": "webfactory/exceptions-bundle",
+    "autoload": {
+        "psr-0": { "Webfactory\\Bundle\\ExceptionsBundle": "" }
+    },
+    "target-dir": "Webfactory/Bundle/ExceptionsBundle"
+}
