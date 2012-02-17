@@ -15,9 +15,7 @@ class WebfactoryExceptionsExtension extends Extension {
         $configuration = new Configuration();
         $config = $processor->processConfiguration($configuration, $configs);
         $container->setParameter('webfactory_exceptions.bundlename', $config['bundle']);
-
-        if ($config['debug'])
-            $container->setParameter('webfactory_exceptions.debug', $config['debug']);
+        $container->setParameter('webfactory_exceptions.debug', $config['debug']);
     }
 
 }
