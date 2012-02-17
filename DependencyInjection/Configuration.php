@@ -14,7 +14,7 @@ class Configuration implements ConfigurationInterface {
             ->scalarNode('bundle')
                 ->isRequired()
                 ->end()
-            ->booleanNode('debug')
+            ->booleanNode('force')
                 ->defaultFalse()
                 ->end()
         ;
