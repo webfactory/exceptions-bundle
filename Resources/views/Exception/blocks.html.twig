@@ -14,6 +14,18 @@
     {{ block('sorryText') }}
 {% endblock %}
 
+{% block standard403Errorpage %}
+    <h1>Entschuldigung!</h1>
+    <p>
+        <strong>Zugriff verweigert.</strong>
+    </p>
+    <div id="explanation">
+        <p>Sie besitzen nicht die erforderlichen Berechtigungen, um diese Seite aufzurufen.</p>
+    </div>
+    {{ block('standardAlternatives') }}
+    {{ block('sorryText') }}
+{% endblock %}
+
 {% block standardAlternatives %}
     <h2>Was nun?</h2>
     <p>Sie können ...</p>
