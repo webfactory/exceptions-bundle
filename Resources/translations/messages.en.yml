@@ -1,0 +1,25 @@
+title: Sorry!
+sorryText: We apologize for the inconvenience!
+search: Search
+error:
+    403:
+        title: Access denied
+        description: You do not have the required permissions to access this page.
+    404:
+        title: Page not found
+        description: |
+            There is no content at this address.
+            It appears you followed a broken or outdated link from a search engine.
+    500:
+        title: Internal server error
+        description: |
+            A error occured while generating the page.
+            The information necessary to resolve the problem has been recorded and forwarded to the relevant authority.
+alternatives:
+    title: Where to go from here?
+    description: You may want to
+    action:
+        back: go back to the %link%previous%endlink% page,
+        start: start over at our %link%home page%endlink%,
+        search: search our site for a keyword (via Google)
+        contact: or %link%contact us%endlink%.

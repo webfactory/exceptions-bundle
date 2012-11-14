@@ -1,0 +1,25 @@
+title: Entschuldigung!
+sorryText: Wir entschuldigen uns für die Unannehmlichkeiten!
+search: Suchen
+error:
+    403:
+        title: Zugriff verweigert
+        description: Sie besitzen nicht die erforderlichen Berechtigungen, um diese Seite aufzurufen.
+    404:
+        title: Dokument nicht gefunden
+        description: |
+            Leider konnte das von Ihnen gewünschte Dokument nicht gefunden werden.
+            Möglicherweise wurde es inzwischen vom Server entfernt oder ist nicht mehr abrufbar.
+    500:
+        title: Interner Serverfehler
+        description: |
+            Beim Generieren der Seite ist ein Fehler aufgetreten.
+            Alle zum Beheben des Fehlers nötigen Informationen wurden aufgezeichnet und der zuständigen Stelle zugeleitet.
+alternatives:
+    title: Was nun?
+    description: Sie können ...
+    action:
+        back: zurück zur %link%vorherigen Seite%endlink% gehen,
+        start: zur %link%Startseite%endlink% wechseln,
+        search: unsere Website nach einem Suchbegriff durchsuchen (via Google)
+        contact: oder %link%Kontakt mit der Redaktion%endlink% aufnehmen.

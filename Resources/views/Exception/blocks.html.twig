@@ -1,34 +1,30 @@
 {% block standard404Errorpage %}
-    <h1>Entschuldigung!</h1>
-    <h3 class="h3">Dokument nicht gefunden (404)</h3>
-    <p>Leider konnte das von Ihnen gewünschte Dokument nicht gefunden werden.<br />Möglicherweise wurde es inzwischen vom Server entfernt oder ist nicht mehr abrufbar.</p>
+    <h1>{{ "title"|trans }}</h1>
+    <h3 class="h3">{{ "error.404.title"|trans }} (404)</h3>
+    <p>{{ "error.404.description"|trans|nl2br }}</p>
     {{ block('standardAlternatives') }}
     {{ block('sorryText') }}
 {% endblock %}
 
 {% block standard500Errorpage %}
-    <h1>Entschuldigung!</h1>
-    <h3 class="h3">Interner Serverfehler (500)</h3>
-    <p>Beim Generieren der Seite ist ein Fehler aufgetreten.<br />Alle zum Beheben des Fehlers nötigen Informationen wurden aufgezeichnet und der zuständigen Stelle zugeleitet.</p>
+    <h1>{{ "title"|trans }}</h1>
+    <h3 class="h3">{{ "error.500.title"|trans }} (500)</h3>
+    <p>{{ "error.500.description"|trans|nl2br }}</p>
     {{ block('standardAlternatives') }}
     {{ block('sorryText') }}
 {% endblock %}
 
 {% block standard403Errorpage %}
-    <h1>Entschuldigung!</h1>
-    <p>
-        <strong>Zugriff verweigert.</strong>
-    </p>
-    <div id="explanation">
-        <p>Sie besitzen nicht die erforderlichen Berechtigungen, um diese Seite aufzurufen.</p>
-    </div>
+    <h1>{{ "title"|trans }}</h1>
+    <h3 class="h3">{{ "error.403.title"|trans }} (403)</h3>
+    <p>{{ "error.403.description"|trans|nl2br }}</p>
     {{ block('standardAlternatives') }}
     {{ block('sorryText') }}
 {% endblock %}
 
 {% block standardAlternatives %}
-    <h2>Was nun?</h2>
-    <p>Sie können ...</p>
+    <h2>{{ "alternatives.title"|trans }}?</h2>
+    <p>{{ "alternatives.description"|trans }}</p>
     <ul class="bulleted">
         <li>{{ block('actionBack') }}</li>
         <li>{{ block('actionZurStartseiteWechseln') }}</li>
@@ -38,28 +34,30 @@
 {% endblock %}
 
 {% block actionBack %}
-    zurück zur <a href="#" onclick="//<![CDATA[
-    window.history.back(); return false;
-    //]]>">vorherigen Seite</a> gehen,
+    {% set link %}<a href="#" onclick="window.history.back(); return false;">{% endset %}
+    {% set endlink %}</a>{% endset %}
+    {{ "alternatives.action.back"|trans({'%link%':link, '%endlink%': endlink})|raw }}
 {% endblock %}
 
 {% block actionZurStartseiteWechseln %}
-    zur <a href="{{ startseitenUrl | default('/') }}">Startseite</a> wechseln,
+    {% set link %}<a href="{{ startseitenUrl | default('/') }}">{% endset %}
+    {% set endlink %}</a>{% endset %}
+    {{ "alternatives.action.start"|trans({'%link%':link, '%endlink%': endlink})|raw }}
 {% endblock %}
 
 {% block actionGoogleSearch %}
-    unsere Website nach einem Suchbegriff durchsuchen (via Google)
-    <form method="get" action="http://www.google.com/search" onsubmit="//<![CDATA[
-        document.getElementById('search-query').value += ' site:' + document.domain;
-        //]]>">
-        <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">Suchen</button></fieldset>
+    {{ "alternatives.action.search"|trans }}
+    <form method="get" action="http://www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
+        <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "search"|trans }}</button></fieldset>
     </form>
 {% endblock %}
 
 {% block actionKontaktAufnehmen %}
-    oder <a href="{{ impressumUrl | default('/impressum') }}">Kontakt mit der Redaktion</a> aufnehmen.
+    {% set link %}<a href="{{ impressumUrl | default('/impressum') }}">{% endset %}
+    {% set endlink %}</a>{% endset %}
+    {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink})|raw }}
 {% endblock %}
 
 {% block sorryText %}
-    <h3 class="h3">Wir entschuldigen uns für die Unannehmlichkeiten!</h3>
+    <h3 class="h3">{{ "sorryText"|trans }}</h3>
 {% endblock %}
