@@ -16,6 +16,7 @@ class WebfactoryExceptionsExtension extends Extension {
         $config = $processor->processConfiguration($configuration, $configs);
         $container->setParameter('webfactory_exceptions.bundlename', $config['bundle']);
         $container->setParameter('webfactory_exceptions.force', $config['force']);
+        $container->setParameter('webfactory_exceptions.locales', $config['locales']);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');

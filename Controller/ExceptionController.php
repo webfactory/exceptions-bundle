@@ -9,6 +9,12 @@ use Symfony\Bundle\TwigBundle\Controller\ExceptionController as BaseController;
 class ExceptionController extends BaseController {
 
     protected function findTemplate($templating, $format, $code, $debug) {
+        /** @var $request \Symfony\Component\HttpFoundation\Request */
+        if ($locales = $this->container->getParameter('webfactory_exceptions.locales')) {
+            $request = $this->container->get('request');
+            $request->setLocale($request->getPreferredLanguage($locales));
+        }
+
         if ($debug && !$this->container->getParameter('webfactory_exceptions.force')) {
             return parent::findTemplate($templating, $format, $code, $debug);
         }

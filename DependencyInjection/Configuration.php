@@ -17,6 +17,9 @@ class Configuration implements ConfigurationInterface {
             ->booleanNode('force')
                 ->defaultFalse()
                 ->end()
+            ->arrayNode('locales')
+                ->prototype('scalar')->end()
+                ->end()
         ;
         return $treeBuilder;
     }
