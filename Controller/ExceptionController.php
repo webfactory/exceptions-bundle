@@ -11,8 +11,19 @@ class ExceptionController extends BaseController {
     protected function findTemplate($templating, $format, $code, $debug) {
         /** @var $request \Symfony\Component\HttpFoundation\Request */
         if ($locales = $this->container->getParameter('webfactory_exceptions.locales')) {
+
+            $availableLocales = array();
+            foreach ($locales as $locale) {
+                $availableLocales[$locale] = $locale;
+                $availableLocales[\Locale::getPrimaryLanguage($locale)] = $locale;
+            }
+
             $request = $this->container->get('request');
-            $request->setLocale($request->getPreferredLanguage($locales));
+
+            $preferredLanguage = $request->getPreferredLanguage(array_keys($availableLocales));
+            $preferredLocale = $availableLocales[$preferredLanguage];
+
+            $request->setLocale($preferredLocale);
         }
 
         if ($debug && !$this->container->getParameter('webfactory_exceptions.force')) {
