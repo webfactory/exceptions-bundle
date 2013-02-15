@@ -1,23 +1,19 @@
 {% block standard404Errorpage %}
-    <h1>{{ "title"|trans }}</h1>
-    <h3 class="h3">{{ "error.404.title"|trans }} (404)</h3>
-    <p>{{ "error.404.description"|trans|nl2br }}</p>
-    {{ block('standardAlternatives') }}
-    {{ block('sorryText') }}
+    {{  block('standardExceptionPage') }}
 {% endblock %}
 
 {% block standard500Errorpage %}
-    <h1>{{ "title"|trans }}</h1>
-    <h3 class="h3">{{ "error.500.title"|trans }} (500)</h3>
-    <p>{{ "error.500.description"|trans|nl2br }}</p>
-    {{ block('standardAlternatives') }}
-    {{ block('sorryText') }}
+    {{  block('standardExceptionPage') }}
 {% endblock %}
 
 {% block standard403Errorpage %}
+    {{  block('standardExceptionPage') }}
+{% endblock %}
+
+{% block standardExceptionPage %}
     <h1>{{ "title"|trans }}</h1>
-    <h3 class="h3">{{ "error.403.title"|trans }} (403)</h3>
-    <p>{{ "error.403.description"|trans|nl2br }}</p>
+    <h3 class="h3">{{ ("error." ~ exception.getStatusCode ~ ".title")|trans }} ({{ exception.getStatusCode }})</h3>
+    <p>{{ ("error." ~ exception.getStatusCode ~ ".description")|trans|nl2br }}</p>
     {{ block('standardAlternatives') }}
     {{ block('sorryText') }}
 {% endblock %}
