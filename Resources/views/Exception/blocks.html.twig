@@ -1,18 +1,14 @@
-{% block standard404Errorpage %}
-    {{  block('standardExceptionPage') }}
+{% block title %}
+    {{ "title"|trans({},'webfactory-exception-bundle') }}
 {% endblock %}
 
-{% block standard500Errorpage %}
-    {{  block('standardExceptionPage') }}
-{% endblock %}
-
-{% block standard403Errorpage %}
-    {{  block('standardExceptionPage') }}
+{% block subtitle %}
+    {{ ("error." ~ exception.getStatusCode ~ ".title")|trans({}, 'webfactory-exception-bundle') }} ({{ exception.getStatusCode }})
 {% endblock %}
 
 {% block standardExceptionPage %}
-    <h1>{{ "title"|trans({},'webfactory-exception-bundle') }}</h1>
-    <h3 class="h3">{{ ("error." ~ exception.getStatusCode ~ ".title")|trans({},'webfactory-exception-bundle') }} ({{ exception.getStatusCode }})</h3>
+    <h1>{{ block('title') }}</h1>
+    <h3 class="h3">{{ block('subtitle') }}</h3>
     <p>{{ ("error." ~ exception.getStatusCode ~ ".description")|trans({},'webfactory-exception-bundle')|nl2br }}</p>
     {{ block('standardAlternatives') }}
     {{ block('sorryText') }}
