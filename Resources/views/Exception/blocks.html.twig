@@ -28,13 +28,13 @@
 {% block actionBack %}
     {% set link %}<a href="#" onclick="window.history.back(); return false;">{% endset %}
     {% set endlink %}</a>{% endset %}
-    {{ "alternatives.action.back"|trans({},'webfactory-exception-bundle')({'%link%':link, '%endlink%': endlink})|raw }}
+    {{ "alternatives.action.back"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exception-bundle')|raw }}
 {% endblock %}
 
 {% block actionZurStartseiteWechseln %}
     {% set link %}<a href="{{ startseitenUrl | default('/') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
-    {{ "alternatives.action.start"|trans({},'webfactory-exception-bundle')({'%link%':link, '%endlink%': endlink})|raw }}
+    {{ "alternatives.action.start"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exception-bundle')|raw }}
 {% endblock %}
 
 {% block actionGoogleSearch %}
@@ -47,7 +47,7 @@
 {% block actionKontaktAufnehmen %}
     {% set link %}<a href="{{ impressumUrl | default('/impressum') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
-    {{ "alternatives.action.contact"|trans({},'webfactory-exception-bundle')({'%link%':link, '%endlink%': endlink})|raw }}
+    {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exception-bundle')|raw }}
 {% endblock %}
 
 {% block sorryText %}
