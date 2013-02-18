@@ -3,10 +3,39 @@
 namespace Webfactory\Bundle\ExceptionsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Templating\TemplateReference;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpFoundation\Response;
 
 use Symfony\Bundle\TwigBundle\Controller\ExceptionController as BaseController;
 
 class ExceptionController extends BaseController {
+
+    /**
+     * @Route("/{locale}/{code}/{format}", defaults={"format" = "html"})
+     */
+    public function testErrorPageAction($locale, $code, $format) {
+        /** @var $request \Symfony\Component\HttpFoundation\Request */
+        $request = $this->container->get('request');
+        $request->setLocale($locale);
+        $request->setRequestFormat($format);
+
+        $currentContent = $this->getAndCleanOutputBuffering();
+
+        $templating = $this->container->get('templating');
+        $exception = new HttpException($code);
+
+        return $templating->renderResponse(
+            $this->findTemplate($templating, $format, $code, false),
+            array(
+                'status_code'    => $code,
+                'status_text'    => isset(Response::$statusTexts[$code]) ? Response::$statusTexts[$code] : '',
+                'exception'      => $exception,
+//                'logger'         => $logger,
+                'currentContent' => $currentContent,
+            )
+        );
+    }
 
     protected function findTemplate($templating, $format, $code, $debug) {
         /** @var $request \Symfony\Component\HttpFoundation\Request */
