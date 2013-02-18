@@ -6,6 +6,7 @@
 
     <parameters>
         <parameter key="webfactory.exceptions.twig_extension.class">Webfactory\Bundle\ExceptionsBundle\Twig\Extension</parameter>
+        <parameter key="twig.exception_listener.controller">Webfactory\Bundle\ExceptionsBundle\Controller\ExceptionController::showAction</parameter>
     </parameters>
 
     <services>
