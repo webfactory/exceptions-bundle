@@ -3,5 +3,10 @@
     "autoload": {
         "psr-0": { "Webfactory\\Bundle\\ExceptionsBundle": "" }
     },
-    "target-dir": "Webfactory/Bundle/ExceptionsBundle"
+    "target-dir": "Webfactory/Bundle/ExceptionsBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-default": "2.0.x-dev"
+        }
+    }
 }
