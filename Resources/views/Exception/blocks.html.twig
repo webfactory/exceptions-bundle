@@ -22,47 +22,47 @@
     {{ ("sorry.footer")|trans({}, 'webfactory-exceptions-bundle')|nl2br }}
 {%- endblock -%}
 
-{% block standardExceptionPage %}
+{% block webfactory_exceptions_standardExceptionPage %}
     <h1>{{ block('webfactory_exceptions_error_headline') }}</h1>
     <h2 class="h2">{{ block('webfactory_exceptions_sorry_title') }}</h2>
     <p>{{ block('webfactory_exceptions_error_description') }}</p>
 
-    {{ block('standardAlternatives') }}
+    {{ block('webfactory_exceptions_standardAlternatives') }}
 
     <strong>{{ block('webfactory_exceptions_sorry_footer') }}</strong>
 {% endblock %}
 
-{% block standardAlternatives %}
+{% block webfactory_exceptions_standardAlternatives %}
     <h2 class="h2">{{ "alternatives.title"|trans({},'webfactory-exceptions-bundle') }}</h2>
     <p>{{ "alternatives.description"|trans({},'webfactory-exceptions-bundle') }}</p>
     <ul class="bulleted">
-        <li>{{ block('actionBack') }}</li>
-        <li>{{ block('actionZurStartseiteWechseln') }}</li>
-        <li>{{ block('actionGoogleSearch') }}</li>
-        <li>{{ block('actionKontaktAufnehmen') }}</li>
+        <li>{{ block('webfactory_exceptions_actionBack') }}</li>
+        <li>{{ block('webfactory_exceptions_actionZurStartseiteWechseln') }}</li>
+        <li>{{ block('webfactory_exceptions_actionGoogleSearch') }}</li>
+        <li>{{ block('webfactory_exceptions_actionKontaktAufnehmen') }}</li>
     </ul>
 {% endblock %}
 
-{% block actionBack %}
+{% block webfactory_exceptions_actionBack %}
     {% set link %}<a href="#" onclick="window.history.back(); return false;">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.back"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
 {% endblock %}
 
-{% block actionZurStartseiteWechseln %}
+{% block webfactory_exceptions_actionZurStartseiteWechseln %}
     {% set link %}<a href="{{ startseiteUrl | default('/') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.start"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
 {% endblock %}
 
-{% block actionGoogleSearch %}
+{% block webfactory_exceptions_actionGoogleSearch %}
     {{ "alternatives.action.search.description"|trans({},'webfactory-exceptions-bundle') }}
     <form method="get" action="http://www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
         <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "alternatives.action.search.button"|trans({},'webfactory-exceptions-bundle') }}</button></fieldset>
     </form>
 {% endblock %}
 
-{% block actionKontaktAufnehmen %}
+{% block webfactory_exceptions_actionKontaktAufnehmen %}
     {% set link %}<a href="{{ kontaktUrl | default('#') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
