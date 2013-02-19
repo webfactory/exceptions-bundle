@@ -10,7 +10,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class TestController extends Controller {
 
     /**
-     * @Route("/{_locale}/{code}/{_format}", defaults={"_format" = "html"})
+     * @Route("/{code}/", defaults={"_format" = "html"}, requirements={"code" = "\d+"})
+     * @Route("/{code}/{_locale}/", defaults={"_format" = "html"}, requirements={"code" = "\d+"})
+     * @Route("/{code}/{_locale}/{_format}/", requirements={"code" = "\d+"})
      */
     public function testErrorPageAction($code, $_format) {
         return $this->forward('WebfactoryExceptionsBundle:Exception:show', array(
