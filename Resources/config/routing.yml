@@ -1,4 +1,4 @@
-webfactory_exceptions:
+_webfactory_exceptions:
     resource: "@WebfactoryExceptionsBundle/Controller/TestController.php"
     type:     annotation
     prefix:   /_error
