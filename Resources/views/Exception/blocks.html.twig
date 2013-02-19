@@ -1,21 +1,39 @@
-{% block title %}
-    {{ "title"|trans({},'webfactory-exception-bundle') }}
-{% endblock %}
+{%- block webfactory_exceptions_error_code -%}
+    {{ exception.getStatusCode }}
+{%- endblock -%}
 
-{% block subtitle %}
-    {{ ("error." ~ exception.getStatusCode ~ ".title")|trans({}, 'webfactory-exception-bundle') }} ({{ exception.getStatusCode }})
-{% endblock %}
+{%- block webfactory_exceptions_error_title -%}
+    {{ ("error." ~ exception.getStatusCode ~ ".title")|trans({}, 'webfactory-exception-bundle') }}
+{%- endblock -%}
+
+{%- block webfactory_exceptions_error_description -%}
+    {{ ("error." ~ exception.getStatusCode ~ ".description")|trans({}, 'webfactory-exception-bundle')|nl2br }}
+{%- endblock -%}
+
+{%- block webfactory_exceptions_error_headline -%}
+    {{ block('webfactory_exceptions_error_title') }} ({{ block('webfactory_exceptions_error_code') }})
+{%- endblock -%}
+
+{%- block webfactory_exceptions_sorry_title -%}
+    {{ ("sorry.title")|trans({}, 'webfactory-exception-bundle') }}
+{%- endblock -%}
+
+{%- block webfactory_exceptions_sorry_footer -%}
+    {{ ("sorry.footer")|trans({}, 'webfactory-exception-bundle')|nl2br }}
+{%- endblock -%}
 
 {% block standardExceptionPage %}
-    <h1>{{ block('title') }}</h1>
-    <h3 class="h3">{{ block('subtitle') }}</h3>
-    <p>{{ ("error." ~ exception.getStatusCode ~ ".description")|trans({},'webfactory-exception-bundle')|nl2br }}</p>
+    <h1>{{ block('webfactory_exceptions_error_headline') }}</h1>
+    <h2 class="h2">{{ block('webfactory_exceptions_sorry_title') }}</h2>
+    <p>{{ block('webfactory_exceptions_error_description') }}</p>
+
     {{ block('standardAlternatives') }}
-    {{ block('sorryText') }}
+
+    <strong>{{ block('webfactory_exceptions_sorry_footer') }}</strong>
 {% endblock %}
 
 {% block standardAlternatives %}
-    <h2>{{ "alternatives.title"|trans({},'webfactory-exception-bundle') }}</h2>
+    <h2 class="h2">{{ "alternatives.title"|trans({},'webfactory-exception-bundle') }}</h2>
     <p>{{ "alternatives.description"|trans({},'webfactory-exception-bundle') }}</p>
     <ul class="bulleted">
         <li>{{ block('actionBack') }}</li>
@@ -32,24 +50,21 @@
 {% endblock %}
 
 {% block actionZurStartseiteWechseln %}
-    {% set link %}<a href="{{ startseitenUrl | default('/') }}">{% endset %}
+    {% set link %}<a href="{{ startseiteUrl | default('/') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.start"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exception-bundle')|raw }}
 {% endblock %}
 
 {% block actionGoogleSearch %}
-    {{ "alternatives.action.search"|trans({},'webfactory-exception-bundle') }}
+    {{ "alternatives.action.search.description"|trans({},'webfactory-exception-bundle') }}
     <form method="get" action="http://www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
-        <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "search"|trans({},'webfactory-exception-bundle') }}</button></fieldset>
+        <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "alternatives.action.search.button"|trans({},'webfactory-exception-bundle') }}</button></fieldset>
     </form>
 {% endblock %}
 
 {% block actionKontaktAufnehmen %}
-    {% set link %}<a href="{{ impressumUrl | default('/impressum') }}">{% endset %}
+    {% set link %}<a href="{{ kontaktUrl | default('#') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exception-bundle')|raw }}
 {% endblock %}
 
-{% block sorryText %}
-    <h3 class="h3">{{ "sorryText"|trans({},'webfactory-exception-bundle') }}</h3>
-{% endblock %}

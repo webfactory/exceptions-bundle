@@ -1,6 +1,8 @@
-title: Entschuldigung!
-sorryText: Wir entschuldigen uns für die Unannehmlichkeiten!
-search: Suchen
+
+sorry:
+    title: Entschuldigung!
+    footer: Wir entschuldigen uns für die Unannehmlichkeiten!
+
 error:
     403:
         title: Zugriff verweigert
@@ -15,11 +17,14 @@ error:
         description: |
             Beim Generieren der Seite ist ein Fehler aufgetreten.
             Alle zum Beheben des Fehlers nötigen Informationen wurden aufgezeichnet und der zuständigen Stelle zugeleitet.
+
 alternatives:
     title: Was nun?
     description: Sie können ...
     action:
         back: zurück zur %link%vorherigen Seite%endlink% gehen,
         start: zur %link%Startseite%endlink% wechseln,
-        search: unsere Website nach einem Suchbegriff durchsuchen (via Google)
-        contact: oder %link%Kontakt mit der Redaktion%endlink% aufnehmen.
+        search:
+            description: unsere Website nach einem Suchbegriff durchsuchen (via Google)
+            button: Suchen
+        contact: oder %link%Kontakt mit uns%endlink% aufnehmen.

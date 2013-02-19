@@ -1,6 +1,8 @@
-title: Sorry!
-sorryText: We apologize for the inconvenience!
-search: Search
+
+sorry:
+    title: Sorry!
+    footer: We apologize for the inconvenience!
+
 error:
     403:
         title: Access denied
@@ -15,11 +17,14 @@ error:
         description: |
             A error occured while generating the page.
             The information necessary to resolve the problem has been recorded and forwarded to the relevant authority.
+
 alternatives:
     title: Where to go from here?
     description: You may want to
     action:
         back: go back to the %link%previous%endlink% page,
         start: start over at our %link%home page%endlink%,
-        search: search our site for a keyword (via Google)
+        search:
+            description: search our site for a keyword (via Google)
+            button: Search
         contact: or %link%contact us%endlink%.
