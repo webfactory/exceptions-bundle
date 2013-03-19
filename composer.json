@@ -6,7 +6,7 @@
     "target-dir": "Webfactory/Bundle/ExceptionsBundle",
     "extra": {
         "branch-alias": {
-            "dev-default": "2.0.x-dev"
+            "dev-default": "3.0.x-dev"
         }
     }
 }
