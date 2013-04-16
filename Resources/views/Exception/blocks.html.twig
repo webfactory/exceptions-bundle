@@ -68,3 +68,12 @@
     {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
 {% endblock %}
 
+{% block webfactory_exceptions_tryAgain %}
+    <form action="./" onsubmit="window.location = document.getElementById('url').value + '?from-error-page'; return false;">
+        <fieldset>
+            <p>{{ "tryAgain.text"|trans({}, 'webfactory-exceptions-bundle') }}</p>
+            <input type="url" name="url" id="url" class="text url-404" value="{{ app.request.scheme ~ '://' ~ app.request.httpHost ~ app.request.baseUrl ~ app.request.server.get('REQUEST_URI') }}" />
+            <button type="submit" class="button">{{ "tryAgain.button"|trans({}, 'webfactory-exceptions-bundle') }}</button>
+        </fieldset>
+    </form>
+{% endblock %}

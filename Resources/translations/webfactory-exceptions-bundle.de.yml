@@ -3,6 +3,10 @@ sorry:
     title: Entschuldigung!
     footer: Wir entschuldigen uns für die Unannehmlichkeiten!
 
+tryAgain:
+    text: Bitte überprüfen Sie die aufgerufene Adresse:
+    button: Nochmal versuchen
+
 error:
     403:
         title: Zugriff verweigert

@@ -3,6 +3,10 @@ sorry:
     title: Sorry!
     footer: We apologize for the inconvenience!
 
+tryAgain:
+    text: Please verify the requested address:
+    button: Try again
+
 error:
     403:
         title: Access denied
