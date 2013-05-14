@@ -7,8 +7,4 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class WebfactoryExceptionsBundle extends Bundle {
 
-    public function getParent() {
-        return 'TwigBundle';
-    }
-
 }
