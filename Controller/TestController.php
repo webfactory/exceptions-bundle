@@ -13,6 +13,12 @@ class TestController extends Controller {
      * @Route("/{code}/{_format}/", requirements={"code" = "\d+"})
      */
     public function testErrorPageAction($code) {
+        $exceptionController = $this->get('twig.controller.exception');
+
+        if ($exceptionController instanceof ExceptionController) {
+            $exceptionController->setDebug(false);
+        }
+
         throw new HttpException($code);
     }
 

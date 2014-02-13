@@ -7,4 +7,9 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class WebfactoryExceptionsBundle extends Bundle {
 
+    public function build(ContainerBuilder $container) {
+        parent::build($container);
+        $container->setParameter('twig.controller.exception.class', 'Webfactory\Bundle\ExceptionsBundle\Controller\ExceptionController');
+    }
+
 }
