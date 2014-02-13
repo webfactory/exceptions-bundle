@@ -1,4 +1,4 @@
-exceptions-bundle
+webfactory/exceptions-bundle
 =================
 
 A bundle to ease development of custom, user-friendly Symfony2 error pages.
