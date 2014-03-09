@@ -12,8 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class TestController extends Controller {
-
+class TestController extends Controller
+{
     /**
      * @Route("/{code}/{_format}", defaults={"_format" = "html"}, requirements={"code" = "\d+"})
      */
@@ -26,5 +26,4 @@ class TestController extends Controller {
 
         throw new HttpException($code);
     }
-
 }
