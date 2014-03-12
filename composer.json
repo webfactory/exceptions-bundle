@@ -7,12 +7,14 @@
 
     "license": "MIT",
 
-    "authors": [{
-        "name": "webfactory GmbH",
-        "email": "info@webfactory.de",
-        "homepage": "http://www.webfactory.de",
-        "role": "Developer"
-    }],
+    "authors": [
+        {
+            "name": "webfactory GmbH",
+            "email": "info@webfactory.de",
+            "homepage": "http://www.webfactory.de",
+            "role": "Developer"
+        }
+    ],
 
     "autoload": {
         "psr-0": { "Webfactory\\Bundle\\ExceptionsBundle": "" }
@@ -28,6 +30,10 @@
 
     "require": {
         "symfony/twig-bundle": "~2.2"
-    }
+    },
 
+    "require-dev": {
+        "symfony/framework-bundle": "~2.2",
+        "sensio/framework-extra-bundle": "~2.2"
+    }
 }
