@@ -1,0 +1,15 @@
+bin/
+conf/
+logs/
+sessions/
+tmp/
+www/
+.DS_Store
+.idea/
+cache.properties
+build/
+composer.phar
+lib/
+vendor/
+phpunit.xml
+composer.lock
