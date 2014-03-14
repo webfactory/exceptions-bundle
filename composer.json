@@ -34,6 +34,7 @@
 
     "require-dev": {
         "symfony/framework-bundle": "~2.2",
-        "sensio/framework-extra-bundle": "~2.2"
+        "sensio/framework-extra-bundle": "~2.2",
+        "phpunit/phpunit": "~4.0"
     }
 }
