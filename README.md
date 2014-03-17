@@ -1,6 +1,8 @@
 WebFactoryExceptionsBundle
 ==========================
 
+[![Build Status](https://travis-ci.org/webfactory/exceptions-bundle.png?branch=master)](https://travis-ci.org/webfactory/exceptions-bundle)
+
 A bundle to easily develop your custom, user-friendly Symfony error pages.
 Why? Because you normally need to go into the ``prod`` app of Symfony (i.e. ``app.php``)
 in order to see the user-facing error templates. But this makes developing
