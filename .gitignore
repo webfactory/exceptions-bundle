@@ -4,7 +4,6 @@ logs/
 sessions/
 tmp/
 www/
-.DS_Store
 .idea/
 cache.properties
 build/
