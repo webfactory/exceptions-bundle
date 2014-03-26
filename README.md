@@ -82,3 +82,13 @@ thanks to the URL that this bundle gives you:
     /_error/{statuscode}/{format}
 
 Happy error-styling!
+
+Credits, Copyright and License
+------------------------------
+
+This bundle was started at webfactory GmbH, Bonn. 
+
+- <http://www.webfactory.de>
+- <http://twitter.com/webfactory>
+
+Copyright 2012-2014 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
