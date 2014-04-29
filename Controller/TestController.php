@@ -17,7 +17,8 @@ class TestController extends Controller
     /**
      * @Route("/{code}/{_format}", defaults={"_format" = "html"}, requirements={"code" = "\d+"})
      */
-    public function testErrorPageAction($code) {
+    public function testErrorPageAction($code)
+    {
         $exceptionController = $this->get('twig.controller.exception');
 
         if ($exceptionController instanceof ExceptionController) {

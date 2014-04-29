@@ -16,4 +16,4 @@ class ExceptionController extends BaseController
     {
         $this->debug = $bool;
     }
-} 
+}

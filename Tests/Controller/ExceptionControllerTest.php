@@ -61,4 +61,3 @@ class ExceptionControllerTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals($expectedValue, 'debug', $this->controller);
     }
 }
- 

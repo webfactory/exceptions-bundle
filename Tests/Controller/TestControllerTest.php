@@ -103,7 +103,8 @@ class TestControllerTest extends \PHPUnit_Framework_TestCase
      */
     public function testTestErrorPageActionSetsDebugToFalseForTwigExceptionController()
     {
-        $exceptionController = $this->getMockBuilder('Webfactory\Bundle\ExceptionsBundle\Controller\ExceptionController')
+        $mockedClass = 'Webfactory\Bundle\ExceptionsBundle\Controller\ExceptionController';
+        $exceptionController = $this->getMockBuilder($mockedClass)
                                     ->disableOriginalConstructor()
                                     ->getMock();
         $exceptionController->expects($this->atLeastOnce())
@@ -118,4 +119,3 @@ class TestControllerTest extends \PHPUnit_Framework_TestCase
         $this->controller->testErrorPageAction(404);
     }
 }
- 
