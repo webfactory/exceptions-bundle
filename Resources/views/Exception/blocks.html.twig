@@ -39,7 +39,9 @@
         <li>{{ block('webfactory_exceptions_actionBack') }}</li>
         <li>{{ block('webfactory_exceptions_actionGetToHomepage') }}</li>
         <li>{{ block('webfactory_exceptions_actionGoogleSearch') }}</li>
-        <li>{{ block('webfactory_exceptions_actionGetInContact') }}</li>
+        {% if contactUrl is defined %}
+            <li>{{ block('webfactory_exceptions_actionGetInContact') }}</li>
+        {% endif %}
     </ul>
 {% endblock %}
 
@@ -71,7 +73,7 @@
 {% endblock %}
 
 {% block webfactory_exceptions_actionGetInContact %}
-    {% set link %}<a href="{{ contactUrl | default('#') }}">{% endset %}
+    {% set link %}<a href="{{ contactUrl }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
 {% endblock %}
