@@ -66,9 +66,11 @@
 {% endblock %}
 
 {% block webfactory_exceptions_actionGoogleSearch %}
-    {{ "alternatives.action.search.description"|trans({},'webfactory-exceptions-bundle') }}
     <form method="get" action="http://www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
-        <fieldset><input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "alternatives.action.search.button"|trans({},'webfactory-exceptions-bundle') }}</button></fieldset>
+        <fieldset>
+            <label for="search-query">{{ "alternatives.action.search.description"|trans({},'webfactory-exceptions-bundle') }}</label>
+            <input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "alternatives.action.search.button"|trans({},'webfactory-exceptions-bundle') }}</button>
+        </fieldset>
     </form>
 {% endblock %}
 
@@ -89,7 +91,7 @@
 {% block webfactory_exceptions_tryAgain %}
     <form action="./" onsubmit="window.location = document.getElementById('url').value + '?from-error-page'; return false;">
         <fieldset>
-            <p>{{ "tryAgain.text"|trans({}, 'webfactory-exceptions-bundle') }}</p>
+            <label for="url">{{ "tryAgain.text"|trans({}, 'webfactory-exceptions-bundle') }}</label>
             <input type="url" name="url" id="url" class="text url-404" value="{{ app.request.scheme ~ '://' ~ app.request.httpHost ~ app.request.baseUrl ~ app.request.server.get('REQUEST_URI') }}" />
             <button type="submit" class="button">{{ "tryAgain.button"|trans({}, 'webfactory-exceptions-bundle') }}</button>
         </fieldset>
