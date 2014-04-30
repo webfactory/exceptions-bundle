@@ -5,17 +5,15 @@ WebfactoryExceptionsBundle
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/badges/quality-score.png?s=1fffd149d27d559a98d2593827453445d9d31995)](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c381412c-205d-41a1-b74f-7e7897a33abe/mini.png)](https://insight.sensiolabs.com/projects/c381412c-205d-41a1-b74f-7e7897a33abe)
 
-A bundle to easily develop your custom, user-friendly Symfony error pages.
-Why? Because you normally need to go into the ``prod`` app of Symfony (i.e. ``app.php``)
-in order to see the user-facing error templates. But this makes developing
-these hard: you need to clear your cache manually after each change and if
-you make a mistake, you won't see the error easily.
+A bundle to simplify development of your custom, user-friendly Symfony error pages.
 
-This bundle allows you to easily see the different user-facing error templates
-for each status code in the dev environment, so you can easily design them.
+_Why?_
 
-Now enjoy these friendly [installation steps](#installation), have a look at the [predefined Twig blocks](#predefined-twig-blocks)
-and finally [view your error pages](#view-your-error-pages) in action.
+By default, you would need to switch `kernel.debug` to `false` (most probably by using the ``app.php`` front controller and/or using the `prod` environment) in order to see the user-facing error pages. But this also requires you to clear the template cache every time you make a change to your error page template. Additionally, you won't get helpful error messages in case something goes wrong.
+
+This bundle provides a simple way to view error pages for different HTTP status codes also in `kernel.debug` mode, so you can easily design them. It also contains some building blocks to help you get the job done.
+
+Follow the [installation steps](#installation), [view your error pages](#view-your-error-pages) in action and then learn about the [predefined Twig blocks](#predefined-twig-blocks) for more user-friendly error pages.
 
 Installation
 ------------
@@ -60,6 +58,19 @@ webfactory_exceptions:
 
 You rock! Now let's design some error pages!
 
+View Your Error Pages
+---------------------
+
+Suppose you've just created an ``error404.html.twig`` template like described
+in the cookbook entry. To view your error page, go to:
+
+    http://localhost/app_dev.php/_error/404
+
+Of course, change ``http://localhost`` to the local URL of your app. In
+fact, you can see the error page for any HTTP status code in any format,
+thanks to the URL that this bundle gives you:
+
+    /_error/{statuscode}/{format}
 Predefined Twig Blocks
 ----------------------
 
@@ -115,19 +126,7 @@ If your base layout already features blocks you need to fill with exception spec
 This loads the `webfactory_exceptions_error_title` block *directly* into the `title` block of your base layout, as well
 as the `webfactory_exceptions_error_headline` block into the `stage_headline` block.
 
-View Your Error Pages
----------------------
 
-Suppose you've just created an ``error404.html.twig`` template like described
-in the cookbook entry. To view your error page, go to:
-
-    http://localhost/app_dev.php/_error/404
-
-Of course, change ``http://localhost`` to the local URL of your app. In
-fact, you can see the error page for any HTTP status code in any format,
-thanks to the URL that this bundle gives you:
-
-    /_error/{statuscode}/{format}
 
 Happy error-styling!
 
