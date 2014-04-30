@@ -81,7 +81,9 @@ Let's say your generic error page extends the base layout of MyWebsiteBundle. Th
 
 The `webfactory_exceptions_standardExceptionPage` block has headings, the translated exception description and provides
 the user with a list of alternatives what they can do next: get back (simulating a browser back), get to the homepage,
-get to the contact page or google the domain.
+get to the contact page or google the domain. It may look like this:
+
+![Sample rendering of the webfactory_exceptions_standardExceptionPage block](Resources/doc/images/webfactory_exceptions_standardExceptionPage-example.png)
 
 ### Links to homepage and contact page
 
