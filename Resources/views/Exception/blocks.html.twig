@@ -49,10 +49,18 @@
     {{ "alternatives.action.back"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
 {% endblock %}
 
-{% block webfactory_exceptions_actionZurStartseiteWechseln %}
-    {% set link %}<a href="{{ startseiteUrl | default('/') }}">{% endset %}
+{% block webfactory_exceptions_actionGetToHomepage %}
+    {% set link %}<a href="{{ homepageUrl | default('/') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.start"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
+{% endblock %}
+
+{# @deprecated: use webfactory_exceptions_actionGetToHomepage instead #}
+{% block webfactory_exceptions_actionZurStartseiteWechseln %}
+    {% if startseiteUrl is defined %}
+        {% set homepageUrl = startseiteUrl %}
+    {% endif %}
+    {{ block('webfactory_exceptions_actionGetToHomepage') }}
 {% endblock %}
 
 {% block webfactory_exceptions_actionGoogleSearch %}
@@ -62,10 +70,18 @@
     </form>
 {% endblock %}
 
-{% block webfactory_exceptions_actionKontaktAufnehmen %}
-    {% set link %}<a href="{{ kontaktUrl | default('#') }}">{% endset %}
+{% block webfactory_exceptions_actionGetInContact %}
+    {% set link %}<a href="{{ contactUrl | default('#') }}">{% endset %}
     {% set endlink %}</a>{% endset %}
     {{ "alternatives.action.contact"|trans({'%link%':link, '%endlink%': endlink},'webfactory-exceptions-bundle')|raw }}
+{% endblock %}
+
+{# @deprecated: use webfactory_exceptions_actionGetInContact instead #}
+{% block webfactory_exceptions_actionKontaktAufnehmen %}
+    {% if kontaktUrl is defined %}
+        {% set contactUrl = kontaktUrl %}
+    {% endif %}
+    {{ block('webfactory_exceptions_actionGetInContact') }}
 {% endblock %}
 
 {% block webfactory_exceptions_tryAgain %}
