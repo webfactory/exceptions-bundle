@@ -1,4 +1,4 @@
-WebFactoryExceptionsBundle
+WebfactoryExceptionsBundle
 ==========================
 
 [![Build Status](https://travis-ci.org/webfactory/exceptions-bundle.png?branch=master)](https://travis-ci.org/webfactory/exceptions-bundle)
