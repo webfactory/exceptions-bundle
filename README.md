@@ -56,13 +56,17 @@ webfactory_exceptions:
     resource: "@WebfactoryExceptionsBundle/Resources/config/routing.yml"
 ```
 
-You rock! Now let's design some error pages!
+Great - now let's have a look at your error pages.
 
-View Your Error Pages
+Viewing Your Error Pages
 ---------------------
 
-Suppose you've just created an ``error404.html.twig`` template like described
-in the cookbook entry. To view your error page, go to:
+Have you read the Symfony Cookbook section on 
+[customizing the 404 page and other error pages](http://symfony.com/doc/current/cookbook/controller/error_pages.html#customizing-the-404-page-and-other-error-pages)?
+Great! Then you know you should place your custom error page templates in `app/Resources/TwigBundle/views/Exception/errorX.html.twig`
+and how Symfony determines which template to use.
+
+Suppose you've just created an ``error404.html.twig`` template. To view this error page, go to:
 
     http://localhost/app_dev.php/_error/404
 
@@ -71,14 +75,12 @@ fact, you can see the error page for any HTTP status code in any format,
 thanks to the URL that this bundle gives you:
 
     /_error/{statuscode}/{format}
+    
+    
 Predefined Twig Blocks
 ----------------------
 
-Do you know the Symfony Cookbook section
-[Customizing the 404 Page and other Error Pages](http://symfony.com/doc/current/cookbook/controller/error_pages.html#customizing-the-404-page-and-other-error-pages)?
-Great! Then you know you should place your custom error page templates in `app/Resources/TwigBundle/views/Exception/errorX.html.twig`
-and how Symfony determines which template to use. What you probably don't know: the WebFactoryExceptionsBundle features
-some Twig blocks we find useful to a) develop error pages swiftly and b) get helpful, user friendly error pages.
+WebfactoryExceptionsBundle also contains some Twig blocks we find useful to quickly create helpful, user friendly error pages.
 
 Let's say your generic error page extends the base layout of MyWebsiteBundle. Then you may want to have your
 `error.html.twig` to look something like this:
@@ -125,8 +127,6 @@ If your base layout already features blocks you need to fill with exception spec
 
 This loads the `webfactory_exceptions_error_title` block *directly* into the `title` block of your base layout, as well
 as the `webfactory_exceptions_error_headline` block into the `stage_headline` block.
-
-
 
 Happy error-styling!
 
