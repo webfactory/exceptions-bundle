@@ -16,9 +16,9 @@ error:
         description: |
             There is no content at this address.
             It appears you followed a broken or outdated link from a search engine.
-    405:
-        title: Zugriffsmethode nicht unterstützt
-        description: Die von Ihnen verwendete HTTP-Zugriffsmethode wird für diese URL nicht unterstützt.
+   405:
+        title: Request method not supported
+        description: The HTTP request method you've used is not supported at this URL.
     500:
         title: Internal server error
         description: |
