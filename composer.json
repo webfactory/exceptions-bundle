@@ -17,10 +17,8 @@
     ],
 
     "autoload": {
-        "psr-0": { "Webfactory\\Bundle\\ExceptionsBundle": "" }
+        "psr-4": { "Webfactory\\Bundle\\ExceptionsBundle\\": "" }
     },
-
-    "target-dir": "Webfactory/Bundle/ExceptionsBundle",
 
     "extra": {
         "branch-alias": {
