@@ -16,9 +16,9 @@ error:
         description: |
             Leider konnte das von Ihnen gewünschte Dokument nicht gefunden werden.
             Möglicherweise wurde es inzwischen vom Server entfernt oder ist nicht mehr abrufbar.
-    405:
-        title: Request method not supported
-        description: The HTTP request method you've used is not supported at this URL.
+   405:
+        title: Zugriffsmethode nicht unterstützt
+        description: Die von Ihnen verwendete HTTP-Zugriffsmethode wird für diese URL nicht unterstützt.
     500:
         title: Interner Serverfehler
         description: |
