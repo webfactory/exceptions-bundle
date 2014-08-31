@@ -1,6 +1,8 @@
 {
     "name": "webfactory/exceptions-bundle",
 
+    "type": "symfony-bundle",
+
     "description": "A simple controller to display error pages during development plus some building blocks for more user-friendly error pages.",
 
     "homepage": "http://inside.webfactory.de/de/blog/symfony2-exception-handling-and-custom-error-pages-explained.html",
