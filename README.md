@@ -13,7 +13,7 @@ By default, you would need to switch `kernel.debug` to `false` (most probably by
 
 This bundle provides a simple way to view error pages for different HTTP status codes also in `kernel.debug` mode, so you can easily design them. It also contains some building blocks to help you get the job done.
 
-Follow the [installation steps](#installation), [view your error pages](#view-your-error-pages) in action and then learn about the [predefined Twig blocks](#predefined-twig-blocks) for more user-friendly error pages.
+Follow the [installation steps](#installation), [view your error pages](#viewing-your-error-pages) in action and then learn about the [predefined Twig blocks](#predefined-twig-blocks) for more user-friendly error pages.
 
 Installation
 ------------
