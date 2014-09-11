@@ -20,17 +20,10 @@ Installation
 
 ### Step 1) Get the bundle via Composer
 
-Add the following to composer.json (see http://getcomposer.org/):
+Add `exceptions-bundle` by running the command (see http://getcomposer.org/):
 
-    "require-dev" :  {
-        // ...
-        "webfactory/exceptions-bundle": "@stable"
-    }
+    php composer.phar require-dev webfactory/exceptions-bundle '@stable'
 
-If you don't have a `require-dev` key in your `composer.json` file, just
-add one! You can alternatively add this to your `require` key and things
-will work just fine. Confused about the difference? See:
-[GetComposer.org: require-dev](https://getcomposer.org/doc/04-schema.md#require-dev).
 
 ### Step 2) Enable the bundle in `app/AppKernel.php`:
 
@@ -46,6 +39,41 @@ public function registerBundles()
     }
     // ...
 }
+```
+
+### Step 3) Import the routing into `app/config/routing_dev.yml`:
+
+```yaml
+# app/config/routing_dev.yml
+webfactory_exceptions:
+    resource: "@WebfactoryExceptionsBundle/Resources/config/routing.yml"
+```
+
+
+Installation (development and production)
+------------
+
+### Step 1) Get the bundle via Composer
+
+Add `exceptions-bundle` by running the command (see http://getcomposer.org/):
+
+    php composer.phar require webfactory/exceptions-bundle '@stable'
+
+
+### Step 2) Enable the bundle in `app/AppKernel.php`:
+
+```php
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new Webfactory\Bundle\ExceptionsBundle\WebfactoryExceptionsBundle(),
+    );
+}
+
 ```
 
 ### Step 3) Import the routing into `app/config/routing_dev.yml`:
@@ -75,10 +103,15 @@ fact, you can see the error page for any HTTP status code in any format,
 thanks to the URL that this bundle gives you:
 
     /_error/{statuscode}/{format}
-    
+
     
 Predefined Twig Blocks
 ----------------------
+
+**Warning:**
+
+> If you use predefined Twig blocks you MUST install the bundle for [development and production](#installation-development-and-production)
+> environments, otherwise Twig cannot locate the templates on production and the handler will always return 500 errors.
 
 WebfactoryExceptionsBundle also contains some Twig blocks we find useful to quickly create helpful, user friendly error pages.
 
