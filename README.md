@@ -106,7 +106,7 @@ start at `/`, you need to set the variable `homepageUrl`.
 Also, you may want to set the variable `contactUrl` to get a link to your contact page in the listed alternatives.
 
     {# error.html.twig #}
-    {% extends 'MeineWebsiteBundle:Layout:base.html.twig' %}
+    {% extends 'MyWebsiteBundle:Layout:base.html.twig' %}
 
     {% set homepageUrl = "http://www.webfactory.de" %}
     {% set contactUrl = path('name_of_a_route') %}
