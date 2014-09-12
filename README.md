@@ -3,7 +3,7 @@ WebfactoryExceptionsBundle
 
 [![Build Status](https://travis-ci.org/webfactory/exceptions-bundle.png?branch=master)](https://travis-ci.org/webfactory/exceptions-bundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/badges/quality-score.png?s=1fffd149d27d559a98d2593827453445d9d31995)](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c381412c-205d-41a1-b74f-7e7897a33abe/mini.png)](https://insight.sensiolabs.com/projects/c381412c-205d-41a1-b74f-7e7897a33abe)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/f93a469f-1f3d-49f4-9282-bcee124b89de/mini.png)](https://insight.sensiolabs.com/projects/f93a469f-1f3d-49f4-9282-bcee124b89de)
 
 A bundle to simplify development of your custom, user-friendly Symfony error pages.
 
