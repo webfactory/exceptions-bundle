@@ -20,17 +20,13 @@ Installation
 
 ### Step 1) Get the bundle via Composer
 
-Add the following to composer.json (see http://getcomposer.org/):
+Add the `exceptions-bundle` dependency by running the command (see http://getcomposer.org/):
 
-    "require-dev" :  {
-        // ...
-        "webfactory/exceptions-bundle": "@stable"
-    }
+    php composer.phar require webfactory/exceptions-bundle '@stable'
 
-If you don't have a `require-dev` key in your `composer.json` file, just
-add one! You can alternatively add this to your `require` key and things
-will work just fine. Confused about the difference? See:
-[GetComposer.org: require-dev](https://getcomposer.org/doc/04-schema.md#require-dev).
+and run     
+
+    php composer.phar install
 
 ### Step 2) Enable the bundle in `app/AppKernel.php`:
 
@@ -41,9 +37,7 @@ will work just fine. Confused about the difference? See:
 public function registerBundles()
 {
     // ...
-    if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-        $bundles[] = new Webfactory\Bundle\ExceptionsBundle\WebfactoryExceptionsBundle();
-    }
+    $bundles[] = new Webfactory\Bundle\ExceptionsBundle\WebfactoryExceptionsBundle();
     // ...
 }
 ```
