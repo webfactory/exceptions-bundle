@@ -52,6 +52,9 @@ webfactory_exceptions:
 
 Great - now let's have a look at your error pages.
 
+**Note:** If you do not use the predefined Twig blocks, you could require and register the bundle for development environments only.
+
+
 Viewing Your Error Pages
 ---------------------
 
