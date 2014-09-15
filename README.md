@@ -28,7 +28,7 @@ and run
 
     php composer.phar install
 
-### Step 2) Enable the bundle in `app/AppKernel.php`:
+### Step 2) Enable the bundle in your app kernel:
 
 ```php
 <?php
@@ -42,10 +42,11 @@ public function registerBundles()
 }
 ```
 
-### Step 3) Import the routing into `app/config/routing_dev.yml`:
+### Step 3) Import the routing into your development routes:
 
 ```yaml
 # app/config/routing_dev.yml
+
 webfactory_exceptions:
     resource: "@WebfactoryExceptionsBundle/Resources/config/routing.yml"
 ```
