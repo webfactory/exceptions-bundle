@@ -85,6 +85,7 @@ Let's say your generic error page extends the base layout of MyWebsiteBundle. Th
 
     {# error.html.twig #}
     {% extends 'MyWebsiteBundle:Layout:base.html.twig' %}
+    {% use "WebfactoryExceptionsBundle:Exception:blocks.html.twig" %}
 
     {% block myMainContentContainer %}
         {{ block('webfactory_exceptions_standardExceptionPage') }}
@@ -105,6 +106,7 @@ Also, you may want to set the variable `contactUrl` to get a link to your contac
 
     {# error.html.twig #}
     {% extends 'MyWebsiteBundle:Layout:base.html.twig' %}
+    {% use "WebfactoryExceptionsBundle:Exception:blocks.html.twig" %}
 
     {% set homepageUrl = "http://www.webfactory.de" %}
     {% set contactUrl = path('name_of_a_route') %}
