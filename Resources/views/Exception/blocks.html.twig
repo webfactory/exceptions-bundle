@@ -66,7 +66,7 @@
 {% endblock %}
 
 {% block webfactory_exceptions_actionGoogleSearch %}
-    <form method="get" action="http://www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
+    <form method="get" action="//www.google.com/search" onsubmit="document.getElementById('search-query').value += ' site:' + document.domain;">
         <fieldset>
             <label for="search-query">{{ "alternatives.action.search.description"|trans({},'webfactory-exceptions-bundle') }}</label>
             <input type="text" name="q" id="search-query" /><button type="submit" class="button">{{ "alternatives.action.search.button"|trans({},'webfactory-exceptions-bundle') }}</button>
