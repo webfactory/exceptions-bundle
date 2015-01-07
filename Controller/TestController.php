@@ -10,7 +10,6 @@ namespace Webfactory\Bundle\ExceptionsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 /**
  * Controller to render your custom exception pages. Accessing it is really simple, e.g. a call to .../405/html will
@@ -21,7 +20,6 @@ class TestController extends Controller
     /**
      * Let the error page for the HTTP status code $code be rendered in the format $format.
      *
-     * @Route("/{code}/{_format}", defaults={"_format" = "html"}, requirements={"code" = "\d+"})
      * @param int $code HTTP error status code
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      */
