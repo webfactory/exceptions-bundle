@@ -5,15 +5,17 @@ WebfactoryExceptionsBundle
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/badges/quality-score.png?s=1fffd149d27d559a98d2593827453445d9d31995)](https://scrutinizer-ci.com/g/webfactory/exceptions-bundle/)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/f93a469f-1f3d-49f4-9282-bcee124b89de/mini.png)](https://insight.sensiolabs.com/projects/f93a469f-1f3d-49f4-9282-bcee124b89de)
 
-A bundle to simplify development of your custom, user-friendly Symfony error pages.
+A bundle to simplify development of your custom, user-friendly Symfony error pages. Most useful in Symfony < 2.6.3.
 
 _Why?_
 
-By default, you would need to switch `kernel.debug` to `false` (most probably by using the ``app.php`` front controller and/or using the `prod` environment) in order to see the user-facing error pages. But this also requires you to clear the template cache every time you make a change to your error page template. Additionally, you won't get helpful error messages in case something goes wrong.
+Prior to Symfony 2.6.3, by default you would need to switch `kernel.debug` to `false` (most probably by using the ``app.php`` front controller and/or using the `prod` environment) in order to see the user-facing error pages. But this also requires you to clear the template cache every time you make a change to your error page template. Additionally, you won't get helpful error messages in case something goes wrong.
 
 This bundle provides a simple way to view error pages for different HTTP status codes also in `kernel.debug` mode, so you can easily design them. It also contains some building blocks to help you get the job done.
 
 Follow the [installation steps](#installation), [view your error pages](#viewing-your-error-pages) in action and then learn about the [predefined Twig blocks](#predefined-twig-blocks) for more user-friendly error pages.
+
+Starting with Symfony 2.6.3 (2.6.0 - 2.6.2 had a bug in this regard), the [main functionality of this bundle moved to the Symfony core](http://symfony.com/blog/new-in-symfony-2-6-error-page-previews). You can still use the predefined Twig blocks, though.
 
 Installation
 ------------
