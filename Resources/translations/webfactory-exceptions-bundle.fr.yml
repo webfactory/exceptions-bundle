@@ -1,0 +1,35 @@
+sorry:
+    title: Excusez nous!
+    footer: Nous vous présentons nos excuses pour ce désagrément!
+
+tryAgain:
+    text: S'il vous plait veuillez vérifier cette adresse
+    button: Essayez à nouveau
+
+error:
+    403:
+        title: Accès refusé
+        description: Vous n'avez pas les permissions requises pour accèder à cette page.
+    404:
+        title: Page non trouvée
+        description: |
+            Il n'y a pas de contenu à cette adresse.
+            Il semble que vous ayez suivi un lien cassé ou n'étant plus à jour depuis un moteur de recherche.
+    405:
+        title: Méthode non supportée
+        description: La méthode HTTP que vous avez utilisée n'est pas supportée à cette adresse.
+    500:
+        title: Erreur interne du serveur
+        description: |
+            Une erreur est apparue pendant la génération de cette page.
+            Les informations nécessaires pour résoudre ce problème ont été enregistrées et envoyées aux autorités compétentes.
+alternatives:
+    title: Où allez à partir d'ici?
+    description: Vous aimeriez peut être
+    action:
+        back: revenir en arrière sur la page %link%précédente%endlink%,
+        start: vous diriger vers la %link%page d'accueil%endlink%,
+        search:
+            description: chercher à partir d'un mot clef (via Google)
+            button: Rechercher
+        contact: ou %link%nous contacter%endlink%.
