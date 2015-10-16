@@ -1,0 +1,37 @@
+
+sorry:
+    title: Oprostite!
+    footer: Ispričavamo se zbog neugodnosti!
+
+tryAgain:
+    text: Molimo provjerite traženu adresu:
+    button: Pokušajte ponovo
+
+error:
+    403:
+        title: Pristup odbijen
+        description: Nemate potrebne ovlasti za pristup ovoj stranici.
+    404:
+        title: Stranica nije pronađena
+        description: |
+            Nema sadržaja na ovoj adresi.
+            Čini se da slijedili neispravan ili zastarjeli link iz tražilice.
+    405:
+        title: Metoda zahtjeva nije podržana
+        description: HTTP metoda zahtjeva koji ste se koristili nije podržana na ovom URL-u.
+    500:
+        title: Interna pogreška poslužitelja
+        description: |
+            Došlo je do pogreške tijekom prikazivanja stranice.
+            Informacije potrebne za rješavanje problema su snimljene i proslijeđene nadležnoj osobi.
+
+alternatives:
+    title: Kuda dalje?
+    description: Možda želite pogledati
+    action:
+        back: natrag na %link%prethodnu%endlink% stranicu,
+        start: krenite ispočetka na %link%početnoj stranici%endlink%,
+        search:
+            description: Pretražite naše stranice ( preko Googlea )
+            button: Pretraži
+        contact: ili %link%nas kontaktirajte%endlink%.
