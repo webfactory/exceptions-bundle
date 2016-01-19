@@ -1,0 +1,37 @@
+
+sorry:
+    title: Ci scusi!
+    footer: Ci scusiamo per il disagio!
+
+tryAgain:
+    text: Si prega di verificare l'indirizzo richiesto:
+    button: Riprova
+
+error:
+    403:
+        title: Accesso negato
+        description: Non disponi delle autorizzazioni necessarie per accedere a questa pagina.
+    404:
+        title: Pagina non trovata
+        description: |
+            Non ci sono contenuti su questo indirizzo
+            Sembra hai raggiunto un link non funzionante o non aggiornato da un motore di ricerca.
+    405:
+        title: Richiesta non supportata
+        description: La richiesta HTTP che hai usato non è supportata da questa URL.
+    500:
+        title: Errore interno del server
+        description: |
+            E' avvenuto un errore durante la generazione della pagina.
+            Le informazioni necessarie per risolvere il problema sono state registrate e trasmesse all'autorità competente.
+
+alternatives:
+    title: Cosa vuoi fare adesso?
+    description: Potresti voler:
+    action:
+        back: tornare alla %link%precedente%endlink% pagina,
+        start: andare alla %link%home page%endlink%,
+        search:
+            description: cercare tramite keyword sul nostro sito (via Google)
+            button: Cerca
+        contact: o %link%contattarci%endlink%.
