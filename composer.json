@@ -3,9 +3,9 @@
 
     "type": "symfony-bundle",
 
-    "description": "A simple controller to display error pages during development plus some building blocks for more user-friendly error pages.",
+    "description": "Building blocks for more user-friendly error pages, plus a simple controller to display error pages during development (helpful prior to Symfony 2.6.3)",
 
-    "homepage": "http://inside.webfactory.de/de/blog/symfony2-exception-handling-and-custom-error-pages-explained.html",
+    "homepage": "https://www.webfactory.de/blog/symfony2-exception-handling-and-custom-error-pages-explained",
 
     "license": "MIT",
 
@@ -22,18 +22,12 @@
         "psr-4": { "Webfactory\\Bundle\\ExceptionsBundle\\": "" }
     },
 
-    "extra": {
-        "branch-alias": {
-            "dev-default": "3.1.x-dev"
-        }
-    },
-
     "require": {
-        "symfony/twig-bundle": "~2.2"
+        "symfony/twig-bundle": "^2.2||^3.0"
     },
 
     "require-dev": {
-        "symfony/framework-bundle": "~2.2",
+        "symfony/framework-bundle": "^2.2||^3.0",
         "phpunit/phpunit": "~4.0"
     }
 }
