@@ -137,7 +137,7 @@ Credits, Copyright and License
 
 This bundle was started at webfactory GmbH, Bonn. It was inspired by the blog post [How Symfony2 turns exceptions into error pages and how to customize those](http://inside.webfactory.de/de/blog/symfony2-exception-handling-and-custom-error-pages-explained.html).
 
-- <http://www.webfactory.de>
-- <http://twitter.com/webfactory>
+- <https://www.webfactory.de>
+- <https://twitter.com/webfactory>
 
-Copyright 2012-2014 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
+Copyright 2012-2018 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
