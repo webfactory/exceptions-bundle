@@ -5,7 +5,13 @@ We're trying to follow [SemVer](http://semver.org) principles to the best of our
 
 This document tries to point out the things you ought to keep in mind when trying to newer versions.
 
+5.0.0
+-----
+
+* Changed route name from webfactory_exceptions_test_testerrorpage to _twig_error_test. It is shorter and forward
+  compatible to Symfony 2.6 that includes an own TestController grown from this bundle.
+
 4.0.0
------------
+-----
 
 * Major version bump due to a change in HTML markup in 9eb3ec4f134e34c93ba8f7927764e9e005de3fe7. You might need to update your styles/CSS.

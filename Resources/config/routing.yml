@@ -1,4 +1,4 @@
-webfactory_exceptions_test_testerrorpage:
+_twig_error_test:
     path:      /_error/{code}/{_format}
     defaults:  { _controller: WebfactoryExceptionsBundle:Test:testErrorPage, _format: "html" }
     requirements:
