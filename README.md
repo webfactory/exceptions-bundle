@@ -65,4 +65,4 @@ Previous releases of this bundle contained extra code that would help during dev
 - <https://www.webfactory.de>
 - <https://twitter.com/webfactory>
 
-Copyright 2012-2021 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
+Copyright 2012-2022 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
