@@ -1,14 +1,3 @@
-bin/
-conf/
-logs/
-sessions/
-tmp/
-www/
-.idea/
-cache.properties
-build/
-composer.phar
-lib/
 vendor/
 phpunit.xml
 composer.lock
