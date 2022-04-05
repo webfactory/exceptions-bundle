@@ -19,15 +19,10 @@
     ],
 
     "autoload": {
-        "psr-4": { "Webfactory\\Bundle\\ExceptionsBundle\\": "" }
+        "psr-4": { "Webfactory\\Bundle\\ExceptionsBundle\\": "src" }
     },
 
     "require": {
-        "symfony/twig-bundle": "^2.2||^3.0||^4.0"
-    },
-
-    "require-dev": {
-        "symfony/framework-bundle": "^2.2||^3.0||^4.0",
-        "phpunit/phpunit": "~4.0"
+        "symfony/http-kernel": "^3.4|^4.4|^5.0|^6.0"
     }
 }

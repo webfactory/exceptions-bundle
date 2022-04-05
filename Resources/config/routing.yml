@@ -1,5 +1,0 @@
-webfactory_exceptions_test_testerrorpage:
-    path:      /_error/{code}/{_format}
-    defaults:  { _controller: WebfactoryExceptionsBundle:Test:testErrorPage, _format: "html" }
-    requirements:
-        code:  \d+
