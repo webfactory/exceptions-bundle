@@ -19,6 +19,9 @@ error:
     405:
         title: Zugriffsmethode nicht unterstützt
         description: Die von Ihnen verwendete HTTP-Zugriffsmethode wird für diese URL nicht unterstützt.
+    400:
+        title: Ungültige Anfrage
+        description: Leider konnte der Server die Anfrage nicht verarbeiten
     500:
         title: Interner Serverfehler
         description: |
