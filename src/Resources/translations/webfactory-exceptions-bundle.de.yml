@@ -8,6 +8,9 @@ tryAgain:
     button: Nochmal versuchen
 
 error:
+    400:
+        title: Ungültige Anfrage
+        description: Leider konnte der Server die Anfrage nicht verarbeiten
     403:
         title: Zugriff verweigert
         description: Sie besitzen nicht die erforderlichen Berechtigungen, um diese Seite aufzurufen.
@@ -19,9 +22,6 @@ error:
     405:
         title: Zugriffsmethode nicht unterstützt
         description: Die von Ihnen verwendete HTTP-Zugriffsmethode wird für diese URL nicht unterstützt.
-    400:
-        title: Ungültige Anfrage
-        description: Leider konnte der Server die Anfrage nicht verarbeiten
     500:
         title: Interner Serverfehler
         description: |
