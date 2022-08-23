@@ -8,6 +8,9 @@ tryAgain:
     button: Try again
 
 error:
+    400:
+        title: Bad request
+        description: The server cannot or will not process the request due to something that is perceived to be a client error (for example, malformed request syntax, invalid request message framing, or deceptive request routing).
     403:
         title: Access denied
         description: You do not have the required permissions to access this page.
