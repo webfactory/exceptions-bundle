@@ -8,6 +8,9 @@ tryAgain:
     button: Nochmal versuchen
 
 error:
+    400:
+        title: Ungültige Anfrage
+        description: Der Server konnte die Anfrage nicht verarbeiten, weil anscheinend ein clientseitiger Fehler geschehen ist (z.B. eine syntaktisch falsche Anfrage).
     403:
         title: Zugriff verweigert
         description: Sie besitzen nicht die erforderlichen Berechtigungen, um diese Seite aufzurufen.
