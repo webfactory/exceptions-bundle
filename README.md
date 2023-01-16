@@ -58,7 +58,7 @@ Happy error-styling!
 
 ## Credits, Copyright and License
 
-This bundle was started at webfactory GmbH, Bonn. It was inspired by the blog post [How Symfony2 turns exceptions into error pages and how to customize those](http://inside.webfactory.de/de/blog/symfony2-exception-handling-and-custom-error-pages-explained.html).
+This bundle was started at webfactory GmbH, Bonn. It was inspired by the blog post [How Symfony2 turns exceptions into error pages and how to customize those](https://www.webfactory.de/blog/symfony2-exception-handling-and-custom-error-pages-explained).
 
 Previous releases of this bundle contained extra code that would help during development to preview your error pages. This code, however, could be merged into the Symfony core in Symfony 2.6, so we could finally remove it from this bundle. Read the [announcement](https://symfony.com/blog/new-in-symfony-2-6-error-page-previews) when you're interested in historic details.
 
