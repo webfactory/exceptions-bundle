@@ -2,7 +2,7 @@
 
 A Symfony Bundle with some Twig templates and blocks to create helpful, user friendly error pages.
 
-Please note: At webfactory, we do not use this bundle actively any more in new projects, since its main functionality was merged into Symfony 2.6 and we prefer to have project-specific templates. However, we still use the wording that we provide with this bundle.
+⚠️ **Please note:** At webfactory, we do no longer use this bundle in new projects, since its main functionality was merged into Symfony 2.6 and we prefer to have project-specific templates. However, we still use the wording that we provide with this bundle.
 
 ## Basic Usage
 
